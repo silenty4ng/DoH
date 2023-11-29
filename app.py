@@ -10,6 +10,7 @@ from base64 import urlsafe_b64decode
 import socket
 
 app = Flask(__name__)
+socket.setdefaulttimeout(5)
 
 @app.route("/dns-query" ,methods=['GET', 'POST'])
 def dns_query():
