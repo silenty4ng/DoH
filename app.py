@@ -23,6 +23,7 @@ def dns_query():
         sock.sendto(payload, ("1.1.1.1", 53))
         rx_meesage, addr = sock.recvfrom(4096)
         return make_response(rx_meesage, 200, {"Content-Type": "application/dns-message"})
+    sock.close()
     return make_response("", 400)
 
 if __name__ == "__main__":
