@@ -1,7 +1,9 @@
+"""
 /*
  * @Author: Silent YANG 
  * @Date: 2023-11-29
  */
+"""
 
 from flask import Flask, request, make_response
 from base64 import urlsafe_b64decode
